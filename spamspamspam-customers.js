@@ -243,9 +243,8 @@ const customers = {
   ]
 }
 
+let emails = customers.customers.map(item => item.contacts.email)
 
-const info = customers.customers.map(function (person) {
-  return person.contacts.email
-})
+let everyEmail = [].concat.apply([], emails);
 
-console.log(info)
+console.log(everyEmail)
